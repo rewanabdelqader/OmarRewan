@@ -1,0 +1,118 @@
+/* ============================================================
+   ARABIC / RTL LAYER
+   Loaded after styles.css. Every layout/typography fix here is
+   scoped to html[dir="rtl"], so this file is safe to include on
+   the English page too — only the .lang-switch button is shared.
+   ============================================================ */
+
+/* --- language switch (shared by both pages) --- */
+.lang-switch {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--sans, "Inter", Arial, sans-serif);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(82, 60, 45, 0.18);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  color: var(--ink, #2b2320);
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+.lang-switch:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 12px 24px rgba(124, 93, 70, 0.14);
+}
+@media (max-width: 480px) {
+  .lang-switch { top: 12px; left: 12px; padding: 7px 13px; font-size: 0.68rem; }
+}
+
+/* --- Arabic type system --- */
+html[dir="rtl"] {
+  --serif: "Amiri", Georgia, serif;
+  --sans: "Cairo", Tahoma, Arial, sans-serif;
+}
+
+/* the decorative "logo" moments get the calligraphic display face */
+html[dir="rtl"] .hero-title,
+html[dir="rtl"] .opening-monogram,
+html[dir="rtl"] .closing-names {
+  font-family: "Aref Ruqaa", "Amiri", serif;
+  font-weight: 700;
+}
+
+/* Arabic script is cursive — wide letter-spacing breaks the joins,
+   so every element that used English-style "tracked uppercase"
+   styling gets normal spacing here instead. */
+html[dir="rtl"] .eyebrow,
+html[dir="rtl"] .hero-title,
+html[dir="rtl"] .hero-date,
+html[dir="rtl"] .section-kicker,
+html[dir="rtl"] .invite-day,
+html[dir="rtl"] .invite-rows dt,
+html[dir="rtl"] .calendar-inline-label,
+html[dir="rtl"] .countdown-label,
+html[dir="rtl"] .detail-label,
+html[dir="rtl"] .calendar-label,
+html[dir="rtl"] .venue-note-label,
+html[dir="rtl"] .closing-date,
+html[dir="rtl"] .opening-monogram,
+html[dir="rtl"] .opening-names,
+html[dir="rtl"] .opening-meta,
+html[dir="rtl"] .opening-meta span,
+html[dir="rtl"] .opening-btn,
+html[dir="rtl"] .kids-photo figcaption,
+html[dir="rtl"] .spy a b,
+html[dir="rtl"] .field span,
+html[dir="rtl"] .palette-card {
+  letter-spacing: normal;
+}
+
+/* Arabic doesn't have a natural italic/oblique form, so swap the
+   editorial italics for upright text instead of a synthetic slant. */
+html[dir="rtl"] em,
+html[dir="rtl"] .hero-quote,
+html[dir="rtl"] .opening-lines,
+html[dir="rtl"] .opening-monogram em,
+html[dir="rtl"] .venue-poem em,
+html[dir="rtl"] .closing-text,
+html[dir="rtl"] .dress-note-thanks,
+html[dir="rtl"] .footer-quote {
+  font-style: normal;
+}
+
+/* --- mirror the two-column color-story divider --- */
+html[dir="rtl"] .dress-note {
+  border-left: 0;
+  border-right: 1px solid var(--line);
+}
+@media (max-width: 1024px) {
+  html[dir="rtl"] .dress-note {
+    border-right: 0;
+    border-top: 1px solid var(--line);
+  }
+}
+
+/* --- mirror the floating scroll-spy nav to the leading edge --- */
+html[dir="rtl"] .spy {
+  right: auto;
+  left: 22px;
+}
+html[dir="rtl"] .spy a {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+html[dir="rtl"] .spy a b {
+  transform: translateX(-6px);
+}
+html[dir="rtl"] .spy a:hover b,
+html[dir="rtl"] .spy a.is-active b {
+  transform: translateX(0);
+}
