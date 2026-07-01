@@ -72,7 +72,7 @@ function initStaticContent() {
   const wdl = $('#weddingDateLabel');
   if (wdl) wdl.textContent = weddingConfig.weddingDateText;
   const fd = $('#footerDate');
-  if (fd) fd.textContent = '٠٨ · ٠٨ · ٢٠٢٦';
+  if (fd) fd.textContent = '8 · 8 · 2026';
 
   const googleLink = $('#googleCalendarLink');
   if (googleLink) googleLink.href = buildGoogleCalendarUrl();
