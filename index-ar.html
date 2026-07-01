@@ -4,42 +4,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="عمر و ريوان هيتجوزوا — 8 أغسطس 2026 في سويس كلوب القاهرة. تعالوا احتفلوا معانا." />
+  <meta name="description" content="Omar & Rewan are getting married — 8 August 2026 at Swiss Club Cairo. Come celebrate with us." />
   <meta name="theme-color" content="#f7efe5" />
-  <title>عمر &amp; ريوان · احتفال حميمي</title>
+  <title>Omar &amp; Rewan · An Intimate Celebration</title>
 
   <!-- tab icon (multiple formats for full browser support) -->
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="apple-touch-icon" href="favicon.ico.png" />
 
   <!-- link preview (WhatsApp / social) -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://omar-rewan.vercel.app/index-ar.html" />
-  <meta property="og:title" content="عمر و ريوان — هنتجوز!" />
-  <meta property="og:description" content="8 أغسطس 2026 · سويس كلوب، القاهرة. تعالوا احتفلوا معانا 🌿" />
+  <meta property="og:url" content="https://omar-rewan.vercel.app/" />
+  <meta property="og:title" content="Omar & Rewan — We're getting married!" />
+  <meta property="og:description" content="٨ أغسطس ٢٠٢٦ · سويس كلوب القاهرة. تعالوا نحتفل مع بعض 🌿" />
   <meta property="og:image" content="https://omar-rewan.vercel.app/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="عمر و ريوان — هنتجوز!" />
-  <meta name="twitter:description" content="8 أغسطس 2026 · سويس كلوب، القاهرة. تعالوا احتفلوا معانا 🌿" />
+  <meta name="twitter:title" content="Omar & Rewan — We're getting married!" />
+  <meta name="twitter:description" content="٨ أغسطس ٢٠٢٦ · سويس كلوب القاهرة. تعالوا نحتفل مع بعض 🌿" />
   <meta name="twitter:image" content="https://omar-rewan.vercel.app/og-image.png" />
 
-  <!-- language alternates -->
-  <link rel="alternate" hreflang="ar" href="https://omar-rewan.vercel.app/index-ar.html" />
-  <link rel="alternate" hreflang="en" href="https://omar-rewan.vercel.app/" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
     rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=5" />
-  <link rel="stylesheet" href="styles-ar.css?v=1" />
+  <link rel="stylesheet" href="styles.css?v=8" />
   <noscript>
     <style>
       .reveal { opacity: 1 !important; transform: none !important; }
@@ -51,9 +47,6 @@
 </head>
 
 <body>
-  <!-- language switch -->
-  <a class="lang-switch" href="index.html" hreflang="en" lang="en">English</a>
-
   <!-- top scroll progress hairline -->
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
@@ -70,55 +63,202 @@
     <div class="opening-scrim" aria-hidden="true"></div>
     <div class="opening-inner">
       <div class="opening-monogram" aria-hidden="true">
-        <span>ع</span><em>و</em><span>ر</span>
+        <span>O</span><em>&amp;</em><span>R</span>
       </div>
-      <p class="opening-names">عمر و ريوان</p>
-      <p class="opening-lines">إحنا وأهلينا،<br />بندعوكوا لحفلة حميمية وسط الجنينة</p>
-      <p class="opening-meta">08 · 08 · 2026<br /><span>سويس كلوب، القاهرة</span></p>
+      <p class="opening-names">Omar &amp; Rewan</p>
+      <p class="opening-lines">مع عيلتينا،<br />بندعوكم تقضوا معنا سهرة في الجنينة</p>
+      <p class="opening-meta">08 · 08 · 2026<br /><span>Swiss Club Cairo</span></p>
       <button class="opening-btn" id="openBtn" type="button">
-        <span>افتحوا الدعوة</span>
+        <span>افتح الدعوة</span>
       </button>
     </div>
   </div>
 
   <!-- side scroll-spy nav -->
-  <nav class="spy" id="spyNav" aria-label="روح لأي قسم">
+  <nav class="spy" id="spyNav" aria-label="Jump to section">
     <a href="#welcome" data-spy="welcome"><span></span><b>أهلاً</b></a>
     <a href="#details" data-spy="details"><span></span><b>التفاصيل</b></a>
     <a href="#venue" data-spy="venue"><span></span><b>المكان</b></a>
-    <a href="#dress-code" data-spy="dress-code"><span></span><b>الألوان</b></a>
-    <a href="#rsvp" data-spy="rsvp"><span></span><b>الحجز</b></a>
+    <a href="#dress-code" data-spy="dress-code"><span></span><b>الكولورز</b></a>
+    <a href="#rsvp" data-spy="rsvp"><span></span><b>حجز</b></a>
   </nav>
+
+
+
+
+
+
+
 
   <main class="site">
     <section class="hero section" id="welcome">
       <div class="hero-media">
-        <img src="Media/4.jpeg" alt="واحدة من فيلات القاهرة التاريخية بالليل، بإضاءة دافية" />
+        <img src="Media/4.jpeg" alt="One of Cairo's historic villas at night, lit with warm light" />
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <p class="eyebrow reveal">إحنا وأهلينا</p>
+        <p class="eyebrow reveal">مع عيلتينا</p>
         <h1 class="hero-title reveal" id="coupleNames">
-          <span class="hero-name">عمر</span>
-          <span class="hero-amp" aria-hidden="true">و</span>
-          <span class="hero-name">ريوان</span>
+          <span class="hero-name">Omar</span>
+          <span class="hero-amp" aria-hidden="true">&amp;</span>
+          <span class="hero-name">Rewan</span>
         </h1>
-        <p class="hero-date reveal" id="weddingDateLabel">08 · 08 · 2026</p>
-        <p class="hero-quote reveal">بندعوكوا تشاركونا حفلة حميمية وسط الجنينة، في بداية مرحلة جديدة من حياتنا.</p>
+        <p class="hero-date reveal" id="weddingDateLabel">٠٨ · ٠٨ · ٢٠٢٦</p>
+        <p class="hero-quote reveal">بندعوكم تكونوا معنا في سهرة في الجنينة — أول ليلة في فصل جديد.</p>
         <div class="hero-actions reveal">
-          <a class="button button-solid" href="#rsvp">احجزوا مكانكم</a>
-          <a class="button button-outline" href="#details">شوفوا التفاصيل</a>
+          <a class="button button-solid" href="#rsvp">احجز مكانك</a>
+          <a class="button button-outline" href="#details">شوف التفاصيل</a>
+
+
+
+
+
         </div>
       </div>
-      <a class="hero-scroll" href="#countdown" aria-label="انزلوا تحت">
+      <a class="hero-scroll" href="#countdown" aria-label="Scroll down">
         <span class="hero-scroll-dot"></span>
       </a>
     </section>
 
     <section class="section section-countdown" id="countdown">
       <div class="section-header reveal">
-        <p class="section-kicker">بنعد الأيام</p>
-        <h2 class="section-title">لحد ما نحتفل مع بعض.</h2>
+        <p class="section-kicker">العد التنازلي</p>
+        <h2 class="section-title">لحد ما نفرح مع بعض.</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
       <div class="countdown-grid countdown-three">
         <article class="countdown-card reveal">
@@ -133,28 +273,55 @@
           <span class="countdown-value" id="minutes">00</span>
           <span class="countdown-label">دقيقة</span>
         </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </section>
 
     <section class="section section-details" id="details">
       <div class="section-header reveal">
-        <p class="section-kicker">تفاصيل الحفل</p>
-        <h2 class="section-title">ليلة هتفضل في دماغنا.</h2>
+        <p class="section-kicker">التفاصيل</p>
+        <h2 class="section-title">سهرة ما تتنساش.</h2>
+
+
+
+
       </div>
       <article class="invite-card reveal">
         <p class="invite-day">السبت</p>
-        <p class="invite-date">8 أغسطس 2026</p>
+        <p class="invite-date">٨ أغسطس ٢٠٢٦</p>
         <div class="invite-line"></div>
         <dl class="invite-rows">
-          <div><dt>الحفل</dt><dd>6:00 مساءً</dd></div>
+          <div><dt>الوقت</dt><dd>٧:٠٠ مساءً</dd></div>
           <div><dt>المكان</dt><dd>سويس كلوب القاهرة</dd></div>
-          <div><dt>الباركينج</dt><dd>جوه النادي</dd></div>
+          <div><dt>الباركينج</dt><dd>جوّا النادي مجاناً</dd></div>
         </dl>
         <div class="invite-actions">
-          <a class="button button-outline" id="mapsLink" href="https://maps.app.goo.gl/iwaNAY48Krx1mPwG9?g_st=ic" target="_blank" rel="noopener noreferrer">📍 افتحوا الموقع على الماب</a>
+          <a class="button button-outline" id="mapsLink" href="https://maps.app.goo.gl/iwaNAY48Krx1mPwG9?g_st=ic" target="_blank" rel="noopener noreferrer">📍 افتح في الخريطة</a>
         </div>
         <div class="calendar-inline" id="calendar">
-          <span class="calendar-inline-label">ضيفوا الميعاد في الكالندر</span>
+          <span class="calendar-inline-label">احفظ في الكالندر</span>
           <a class="cal-btn" id="googleCalendarLink" href="#" target="_blank" rel="noopener noreferrer">Google</a>
           <a class="cal-btn" id="appleCalendarLink" href="#" download="Omar-Rewan-Wedding.ics">Apple</a>
           <a class="cal-btn" id="outlookCalendarLink" href="#" download="Omar-Rewan-Wedding.ics">Outlook</a>
@@ -164,158 +331,409 @@
 
     <section class="section section-venue" id="venue">
       <div class="section-header reveal">
-        <p class="section-kicker">مكان الحفل</p>
-        <h2 class="section-title">فيلا وجنينة هتسحر قلبكم.</h2>
+        <p class="section-kicker">المكان</p>
+        <h2 class="section-title">فيلا في الجنينة.</h2>
         <p class="section-lead venue-poem">
-          حفلتنا هتكون جوه واحدة من أرقى فيلات القاهرة التاريخية، هتلاقونا تحت الشجر،
-          وسط نور الشموع وموسيقى هادية، ومع أحلى الناس في حياتنا.<br />
-          <em>والباقي سيبوه علينا… هيبقى مفاجأة.</em>
+          في واحدة من أجمل فيلل القاهرة القديمة، هنحتفل تحت الأشجار — شموع وموسيقى هادية وناس بنحبهم.
+          <br /><em>باقي التفاصيل؟ سيبوها مفاجأة.</em>
         </p>
       </div>
       <div class="venue-gallery reveal">
-        <figure class="venue-photo"><img src="Media/2.jpeg" alt="الفيلا بالليل" loading="lazy" /></figure>
-        <figure class="venue-photo"><img src="Media/4.jpeg" alt="الفيلا والجنينة" loading="lazy" /></figure>
-        <figure class="venue-photo"><img src="Media/1.jpeg" alt="جنينة الحفل المفتوحة" loading="lazy" /></figure>
-        <figure class="venue-photo"><img src="Media/7.jpeg" alt="ممرات الجنينة المليانة شجر" loading="lazy" /></figure>
-        <figure class="venue-photo"><img src="Media/5.jpeg" alt="إضاءة دافية عند مدخل الفيلا" loading="lazy" /></figure>
+        <figure class="venue-photo"><img src="Media/5.jpeg" alt="The villa at night" loading="lazy" /></figure>
+        <figure class="venue-photo"><img src="Media/4.jpeg" alt="The villa and garden" loading="lazy" /></figure>
+        <figure class="venue-photo"><img src="Media/13.png" alt="The open garden lawn" loading="lazy" /></figure>
+        <figure class="venue-photo"><img src="Media/7.jpeg" alt="Tree-lined garden pathways" loading="lazy" /></figure>
+        <figure class="venue-photo"><img src="Media/2.jpeg" alt="Warm garden lighting at the entrance" loading="lazy" /></figure>
       </div>
       <div class="venue-map reveal">
         <iframe
-          title="خريطة سويس كلوب القاهرة"
+          title="Swiss Club Cairo map"
           src="https://www.google.com/maps?q=Swiss%20Club%20Cairo&output=embed"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </section>
 
     <section class="section section-dress" id="dress-code">
       <div class="section-header reveal">
-        <p class="section-kicker">ألوان الحفلة</p>
-        <h2 class="section-title">حكاية الألوان بتاعتنا.</h2>
-        <p class="section-lead">ألوان هادية مستوحاة من الجنينة، تناسب جو الأمسية اللي بنحلم بيها.</p>
+        <p class="section-kicker">الدريس كود</p>
+        <h2 class="section-title">قصة الألوان.</h2>
+        <p class="section-lead">ألوان ناعمة تليق بسهرة في الجنينة — علشان نكمّل الجو اللي بنحلم بيه.</p>
       </div>
       <div class="palette-layout">
         <div class="palette-grid">
-          <article class="palette-card reveal"><span style="background:#cfe0f3"></span>أزرق فاتح</article>
-          <article class="palette-card reveal"><span style="background:#d9c8ef"></span>لافندر بنفسجي</article>
+          <article class="palette-card reveal"><span style="background:#cfe0f3"></span>باودر بلو</article>
+          <article class="palette-card reveal"><span style="background:#d9c8ef"></span>لافندر</article>
           <article class="palette-card reveal"><span style="background:#f5d8bf"></span>خوخي فاتح</article>
           <article class="palette-card reveal"><span style="background:#f3e28b"></span>أصفر زبدة</article>
-          <article class="palette-card reveal"><span style="background:#d5d8dc"></span>رمادي فاتح</article>
-          <article class="palette-card reveal"><span style="background:#cfe6d0"></span>أخضر سيج فاتح</article>
+          <article class="palette-card reveal"><span style="background:#d5d8dc"></span>رمادي حمامة</article>
+          <article class="palette-card reveal"><span style="background:#cfe6d0"></span>سيج فاتح</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
         <aside class="dress-note reveal">
           <p>
-            علشان نحافظ على جو الأمسية اللي متخيلينه، ألوان العاجي والشمبين
-            والبيج والبينك الفاتح هتكون مخصوصة للعروسة وعيلتها القريبة بس.
+            عشان نحافظ على الجو اللي تخيّلناه، الألوان الإيفوري والشمبانيه والبيج والبلاش
+            محجوزة للعروسة وعيلتها القريبة.
           </p>
-          <p class="dress-note-thanks">شكراً ليكم إنكم بتساعدونا نطلّع الأمسية دي للنور.</p>
+          <p class="dress-note-thanks">شكراً إنكم بتساعدونا نعمل الليلة دي حلوة. 🤍</p>
         </aside>
       </div>
+
+
+
+
+
     </section>
 
     <section class="section section-kids" id="kids-area">
       <div class="section-header reveal">
-        <p class="section-kicker">الضيوف الصغيرين</p>
-        <h2 class="section-title">أمسية للكبار بس.</h2>
+        <p class="section-kicker">الصغيرين</p>
+        <h2 class="section-title">سهرة للكبار.</h2>
         <p class="section-lead">
-          حفلتنا متعملة عشان تكون أمسية حميمية للكبار. بس لو هتجيبوا حد صغير
-          معاكم، هيكون فيه مكان مخصص للأطفال جوه المكان. وبنتمنى إن ده يخلي
-          الكل يستمتع بالليلة على راحته.
+          الفرح مصمّم يكون سهرة للكبار. بس لو الظروف اضطرتك تجيب طفلك معاك، فيه كيدز إيريا
+          خاص جوّا المكان بيستناه. نتمنى نبسّط على الكل. 🌿
         </p>
       </div>
       <div class="kids-gallery kids-sepia reveal">
-        <figure class="kids-photo"><img src="Media/3.jpeg" alt="مكان الأطفال في الحفل" loading="lazy" /><figcaption>ركن الأطفال</figcaption></figure>
-        <figure class="kids-photo"><img src="Media/6.jpeg" alt="ركن هادي للصغيرين" loading="lazy" /><figcaption>ركن الأطفال</figcaption></figure>
+        <figure class="kids-photo"><img src="Media/3.jpeg" alt="كيدز إيريا في المكان" loading="lazy" /><figcaption>كيدز إيريا</figcaption></figure>
+        <figure class="kids-photo"><img src="Media/6.jpeg" alt="مساحة الأطفال" loading="lazy" /><figcaption>كيدز إيريا</figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </section>
 
     <section class="section section-rsvp" id="rsvp">
       <div class="section-header reveal">
-        <p class="section-kicker">تأكيد الحضور</p>
-        <h2 class="section-title">احجزوا مكانكم.</h2>
-        <p class="section-lead">يا ريت تأكدولنا قبل 25 يوليو عشان نقدر نجهزلكم مكان.</p>
+        <p class="section-kicker">RSVP</p>
+        <h2 class="section-title">احجز مكانك.</h2>
+        <p class="section-lead">قولنا قبل ٢٥ يوليو عشان نجهّز مكانك. بياخد ٣٠ ثانية بس. 🤍</p>
+
       </div>
       <div class="rsvp-layout">
         <form class="rsvp-form reveal" id="rsvpForm" novalidate>
           <div class="field-grid">
             <label class="field">
-              <span>الاسم بالكامل</span>
+              <span>الاسم كامل</span>
               <input id="fullName" name="fullName" type="text" autocomplete="name" required />
             </label>
             <label class="field">
-              <span>رقم التليفون</span>
+              <span>رقم الموبايل</span>
               <input id="phoneNumber" name="phoneNumber" type="tel" autocomplete="tel" />
             </label>
             <label class="field">
-              <span>عدد الحضور</span>
+              <span>عدد الضيوف</span>
               <input id="guestCount" name="guestCount" type="number" min="1" max="10" value="1" required />
             </label>
           <label class="field">
-            <span>هتجيبوا أطفال معاكم؟</span>
+            <span>هتجيب أطفال؟</span>
             <select id="bringingChildren" name="bringingChildren">
               <option value="No">لأ</option>
               <option value="Yes">أيوه</option>
             </select>
           </label>
           <label class="field" id="childrenCountField">
-            <span>هتجيبوا كام طفل؟</span>
+            <span>كام طفل؟</span>
             <input id="childrenCount" name="childrenCount" type="number" min="0" max="10" value="0" />
           </label>
         </div>
 
-          <div class="radio-group" role="radiogroup" aria-label="هتحضروا ولا لأ">
+          <div class="radio-group" role="radiogroup" aria-label="Attendance">
             <label class="radio-pill">
               <input type="radio" name="attendance" value="Attending" checked />
-              <span>هحضر</span>
+              <span>هاجي إن شاء الله</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </label>
             <label class="radio-pill">
               <input type="radio" name="attendance" value="Not Attending" />
-              <span>مش هقدر أحضر</span>
+              <span>معدرتش آجي</span>
             </label>
           </div>
 
           <label class="field">
-            <span>حابين تقولولنا حاجة؟ (اختياري)</span>
-            <textarea id="specialNotes" name="specialNotes" rows="3" placeholder="أغنية حابين تسمعوها، تحية، أي حاجة 🤍"></textarea>
+            <span>ملاحظة لينا (اختياري)</span>
+            <textarea id="specialNotes" name="specialNotes" rows="3" placeholder="أغنية عايزها تتعزف، سلام، أي حاجة 🤍"></textarea>
           </label>
 
+
+
           <div class="rsvp-actions">
-            <button class="button button-solid" type="submit" id="submitRsvp">أكدوا حضوركم</button>
+            <button class="button button-solid" type="submit" id="submitRsvp">احجز مكانك</button>
+
+
+
           </div>
           <p class="rsvp-status" id="rsvpStatus" aria-live="polite"></p>
         </form>
+
       </div>
     </section>
 
     <section class="section section-closing" id="closing">
       <div class="closing-inner reveal">
-        <p class="section-kicker">آخر كلمة…</p>
+        <p class="section-kicker">وأخيراً…</p>
         <p class="closing-text">
-          وجودكم معانا أهم لينا من أي كلام نقدر نقوله.
-          شكراً إنكم هتكونوا جزء من البداية الحلوة دي.
+          وجودكم معانا مش بيتوصفش بكلام.
+          شكراً إنكم جزء من البداية الحلوة دي.
         </p>
-        <p class="closing-text closing-text-soft">مش قادرين نستنى نحتفل مع بعض.</p>
-        <p class="closing-names">عمر و ريوان</p>
+        <p class="closing-text closing-text-soft">مستنيينكم بجد. 🤍</p>
+        <p class="closing-names">Omar &amp; Rewan</p>
         <p class="closing-date" id="footerDate">08 · 08 · 2026</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </section>
 
     <!-- optional ambient music (off by default; needs Media/music.mp3) -->
-    <button class="music-toggle" id="musicToggle" type="button" aria-label="شغل الموسيقى" hidden>
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Play music" hidden>
       <span class="music-icon" aria-hidden="true"></span>
     </button>
     <audio id="bgMusic" loop preload="none">
       <source src="Media/music.mp3" type="audio/mpeg" />
     </audio>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </main>
 
   <!-- photo lightbox -->
-  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="عرض الصور">
-    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="قفل">&times;</button>
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close">&times;</button>
     <img id="lightboxImg" alt="" />
   </div>
 
-  <script src="script-ar.js?v=1"></script>
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js?v=8" defer></script>
 </body>
 
 </html>
