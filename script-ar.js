@@ -2,7 +2,7 @@
 
 const weddingConfig = {
   coupleNames: 'Omar & Rewan',
-  weddingDateText: '٠8 · 8 · 2026',
+  weddingDateText: '8 · 8 · 2026',
   start: new Date('2026-08-08T19:00:00+03:00'),
   end: new Date('2026-08-08T23:00:00+03:00'),
   startLocal: '20260808T190000',
