@@ -3,10 +3,10 @@
 const weddingConfig = {
   coupleNames: 'Omar & Rewan',
   weddingDateText: '8 · 8 · 2026',
-  start: new Date('2026-08-08T19:00:00+03:00'),
-  end: new Date('2026-08-08T23:00:00+03:00'),
-  startLocal: '20260808T190000',
-  endLocal: '20260808T230000',
+  start: new Date('2026-08-08T17:00:00+03:00'),
+  end: new Date('2026-08-08T21:00:00+03:00'),
+  startLocal: '20260808T170000',
+  endLocal: '20260808T210000',
   venueName: 'النادى السويسرى بالقاهره',
   venueAddress: 'Swiss Club Cairo, Cairo, Egypt',
   venueMapsUrl: 'https://maps.app.goo.gl/iwaNAY48Krx1mPwG9?g_st=ic',
@@ -239,11 +239,12 @@ function generateInvitationCard(guestName, guestCount) {
   ctx.strokeStyle = '#d6be94'; ctx.lineWidth = 1;
   ctx.beginPath(); ctx.moveTo(CX+46, CY+156); ctx.lineTo(CX+500, CY+156); ctx.stroke();
 
-  // 4 data rows
+  // 5 data rows
   const ROW_X = CX+46, ROW_W = CW-92, ROW_H = 78, ROW_GAP = 90, ROW_START = CY+170;
   const rows = [
     { label: 'اسم الضيف', value: sanitizeName(guestName), italic: true },
-    { label: 'التاريخ والوقت', value: 'السبت ٨ أغسطس ٢٠٢٦  ·  ٧:٠٠ م', italic: false },
+    { label: 'عدد الضيوف', value: String(Math.max(1, Number(guestCount) || 1)), italic: false },
+    { label: 'التاريخ والوقت', value: 'السبت 8 أغسطس 2026  ·  5:00 م', italic: false },
     { label: 'المكان', value: 'النادى السويسرى بالقاهره', italic: false },
     { label: 'الباركينج', value: 'باركينج جوّا النادي', italic: false },
   ];
@@ -278,17 +279,6 @@ function generateInvitationCard(guestName, guestCount) {
   return canvas;
 }
 
-
-function roundRectFill(ctx, x, y, w, h, r) {
-  ctx.beginPath();
-  ctx.moveTo(x + r, y);
-  ctx.arcTo(x + w, y, x + w, y + h, r);
-  ctx.arcTo(x + w, y + h, x, y + h, r);
-  ctx.arcTo(x, y + h, x, y, r);
-  ctx.arcTo(x, y, x + w, y, r);
-  ctx.closePath();
-  ctx.fill();
-}
 
 function downloadInvitationCard(guestName, guestCount) {
   return new Promise((resolve) => {
