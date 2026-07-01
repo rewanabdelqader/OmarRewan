@@ -2,12 +2,12 @@
 
 const weddingConfig = {
   coupleNames: 'Omar & Rewan',
-  weddingDateText: '٠٨ · ٠٨ · ٢٠٢٦',
+  weddingDateText: '٠8 · 8 · 2026',
   start: new Date('2026-08-08T19:00:00+03:00'),
   end: new Date('2026-08-08T23:00:00+03:00'),
   startLocal: '20260808T190000',
   endLocal: '20260808T230000',
-  venueName: 'سويس كلوب القاهرة',
+  venueName: 'النادى السويسرى بالقاهره',
   venueAddress: 'Swiss Club Cairo, Cairo, Egypt',
   venueMapsUrl: 'https://maps.app.goo.gl/iwaNAY48Krx1mPwG9?g_st=ic',
   rsvpEndpoint: 'https://script.google.com/macros/s/AKfycbyzceubK37TDNa0K3uyqr9bHAb6DfD_noG1GxkT87IvKPUmIUvzAKuVoGYNaqEc1D4BiA/exec',
@@ -244,8 +244,8 @@ function generateInvitationCard(guestName, guestCount) {
   const rows = [
     { label: 'اسم الضيف', value: sanitizeName(guestName), italic: true },
     { label: 'التاريخ والوقت', value: 'السبت ٨ أغسطس ٢٠٢٦  ·  ٧:٠٠ م', italic: false },
-    { label: 'المكان', value: 'سويس كلوب القاهرة', italic: false },
-    { label: 'الباركينج', value: 'باركينج مجاني جوّا النادي', italic: false },
+    { label: 'المكان', value: 'النادى السويسرى بالقاهره', italic: false },
+    { label: 'الباركينج', value: 'باركينج جوّا النادي', italic: false },
   ];
   rows.forEach((row, i) => {
     const ry = ROW_START + i * ROW_GAP;
@@ -272,7 +272,7 @@ function generateInvitationCard(guestName, guestCount) {
   ctx.fillStyle = '#c79a5c';
   ctx.font = '600 16px "Inter",Arial,sans-serif';
   ctx.letterSpacing = '0.12em';
-  ctx.fillText('٠٨  ·  ٠٨  ·  ٢٠٢٦', CX + CW - 200, CY + CH - 22);
+  ctx.fillText('8  ·  8  ·  2026', CX + CW - 200, CY + CH - 22);
   ctx.letterSpacing = '0';
 
   return canvas;
@@ -299,7 +299,7 @@ function downloadInvitationCard(guestName, guestCount) {
       if (!blob) { resolve(false); return; }
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
-      a.download = `دعوة_عمر_ريوان_${safe}.png`;
+      a.download = `دعوة_عمر_روان_${safe}.png`;
       a.href = url;
       a.style.display = 'none';
       document.body.appendChild(a);
